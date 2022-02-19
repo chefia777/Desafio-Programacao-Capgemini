@@ -68,7 +68,19 @@ return quantidade/2;
 
 document.write(validacao(n));
  
+//Teste Unitários
+//Teste com os valores passados pelo enunciado
 
+console.log("Teste com os valores passados pelo enunciado: " + (validacao("ovo")==2)); //Se resultado for Verdadeiro, teste passou.
+console.log("Teste com os valores passados pelo enunciado: " + (validacao("ifailuhkqq")==3)); //Se resultado for Verdadeiro, teste passou.
+
+//Teste em branco
+
+console.log("Teste em branco: " + (validacao("")==0)); //Se resultado for Verdadeiro, teste passou.
+
+//Teste com números
+
+console.log("Teste com números: " + (validacao("12321")==6)); //Se resultado for Verdadeiro, teste passou.
        
 </script>
   
