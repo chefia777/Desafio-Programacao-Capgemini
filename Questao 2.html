@@ -24,7 +24,7 @@
         "^(?=.*[a-z]).+$"
       );
       if (!pattern.test(str)) {
-        console.log("Adicione uma letra minuscula" + "<br>");
+        console.log("Adicione uma letra minuscula");
         return 1;
       }
       return 0;
@@ -35,7 +35,7 @@
         "^(?=.*[A-Z]).+$"
       );
       if (!pattern.test(str)) {
-        console.log("Adicione ao menos uma letra maiuscula" + "<br>");
+        console.log("Adicione ao menos uma letra maiuscula");
         return 1;
       }
       return 0;
@@ -46,7 +46,7 @@
         "^(?=.*\\d).+$"
       );
       if (!pattern.test(str)) {
-        console.log("Adicione um Numero" + "<br>");
+        console.log("Adicione um Numero");
         return 1;
       }
       return 0;
@@ -57,7 +57,7 @@
         "^(?=.*[-+_!@#$%^&*.,?]).+$"
       );
       if (!pattern.test(str)) {
-        console.log("Adicione um Simbolo" + "<br>");
+        console.log("Adicione um Simbolo");
         return 1
       }
       return 0;
@@ -67,7 +67,7 @@
   function validacao(n) {
     var nfaltantes = 0;
     if (n.length<6) {
-      console.log("Adicione mais " +  (6 - n.length) + " caracteres" + "<br>");
+      console.log("Adicione mais " +  (6 - n.length) + " caracteres");
       nfaltantes = 6 - n.length;
     }else{
       nfaltantes = minusculo(n)+maiusculo(n)+numero(n)+simbolo(n);
@@ -76,6 +76,51 @@
   }
 
 document.write(validacao(n));
+
+//Teste Unitários
+//Teste apenas com minúsculas
+
+console.log("Validacao de letras minusculas: " + (validacao("aaaaaa")==3)); //Se resultado for Verdadeiro, teste passou.
+
+//Teste apenas com maiúsculas
+
+console.log("Teste apenas com maiúsculas: " + (validacao("AAAAAA")==3)); //Se resultado for Verdadeiro, teste passou.
+
+//Teste apenas com número
+
+console.log("Teste apenas com número: " + (validacao("111111")==3)); //Se resultado for Verdadeiro, teste passou.
+
+//Teste com minúsculas e maísculas
+
+console.log("Teste com minúsculas e maísculas: " + (validacao("aaaAAA")==2)); //Se resultado for Verdadeiro, teste passou.
+
+//Teste com minúsculas e números
+
+console.log("Teste com minúsculas e números: " + (validacao("aaa333")==2)); //Se resultado for Verdadeiro, teste passou.
+
+//Teste com maiúsculas e números
+
+console.log("Teste com maiúsculas e números: " + (validacao("AAA333")==2)); //Se resultado for Verdadeiro, teste passou.
+
+//Teste com minúsculas, maiúsculas e números
+
+console.log("Teste com minúsculas, maiúsculas e números: " + (validacao("aAa333")==1)); //Se resultado for Verdadeiro, teste passou.
+
+//Teste com minúsculas, maiúsculas, números e símbolos
+
+console.log("Teste com minúsculas, maiúsculas, números e símbolos: " + (validacao("aAa33#3")==0)); //Se resultado for Verdadeiro, teste passou.
+
+//Teste em branco
+
+console.log("Teste em branco: " + (validacao("")==6)); //Se resultado for Verdadeiro, teste passou.
+
+//Teste com menos de 6 caracteres
+
+console.log("Teste com menos de 6 caracteres: " + (validacao("Ya3")==3)); //Se resultado for Verdadeiro, teste passou.
+
+//Teste com menos de 6 caracteres com todos os tipos
+
+console.log("Teste com menos de 6 caracteres com todos os tipos: " + (validacao("Ya3@")==2)); //Se resultado for Verdadeiro, teste passou.
 
   </script>
     <!-- Scripts will be included here automatically with type="module" -->
