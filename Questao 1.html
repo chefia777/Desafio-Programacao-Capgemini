@@ -9,22 +9,28 @@
   <body>
     <h1 id="header"></h1>
   <script>
-    var i,j;
-    var n = 6
-    for(i=1; i<=n; i++)
-    {
-      for(j=i; j<n; j++)
-        {
-        document.write("&nbsp&nbsp");
-        console.log(" ")
-        }
-        for(j=1; j<=i; j++)
-        {
-          document.write("*");
-          console.log("*")
-        }
-      document.write("<br/>");
+    var n = prompt("Digite o tamanho da escada desejada")
+    
+    function gerarEscada(n){
+      var i,j;
+      for(i=1; i<=n; i++)
+      {
+        for(j=i; j<n; j++)
+          {
+          document.write("&nbsp&nbsp");
+          console.log(" ")
+          }
+          for(j=1; j<=i; j++)
+          {
+            document.write("*");
+            console.log("*")
+          }
+        document.write("<br/>");
+      }
     }
+
+  gerarEscada(n)
+
   </script>
     <!-- Scripts will be included here automatically with type="module" -->
   </body>
