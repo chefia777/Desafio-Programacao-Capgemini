@@ -68,7 +68,11 @@
     var nfaltantes = 0;
     if (n.length<6) {
       console.log("Adicione mais " +  (6 - n.length) + " caracteres");
-      nfaltantes = 6 - n.length;
+      if ((6 - n.length)>(minusculo(n)+maiusculo(n)+numero(n)+simbolo(n))) {
+        nfaltantes = 6 - n.length;
+      }else {
+        nfaltantes = minusculo(n)+maiusculo(n)+numero(n)+simbolo(n);
+      }
     }else{
       nfaltantes = minusculo(n)+maiusculo(n)+numero(n)+simbolo(n);
     }
