@@ -14,3 +14,8 @@ O valor retornado será o número de dígitos faltantes para uma senha considera
 Os testes unitários foram escritos no Console log, após digitar uma senha é necessário acessar o console log para acessar os testes unitários.
 
 ## Questão 3
+Para testar voce deve acessar o arquivo "Questao 3.html" e uma vez habilitado no navegar inserir a palavra desejada no prompt.
+
+O valor retornado será o número de anagramas encontrados na palavra digitada. 
+
+Os testes unitários foram escritos no Console log, após digitar uma palavra é necessário acessar o console log para acessar os testes unitários.
