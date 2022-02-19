@@ -1,0 +1,80 @@
+<!-- 
+  Débora se inscreveu em uma rede social para se manter em contato com seus amigos. A página de cadastro exigia o preenchimento dos campos de nome e senha, porém a senha precisa ser forte. O site considera uma senha forte quando ela satisfaz os seguintes critérios:
+  Possui no mínimo 6 caracteres.
+  Contém no mínimo 1 digito.
+  Contém no mínimo 1 letra em minúsculo.
+  Contém no mínimo 1 letra em maiúsculo.
+  Contém no mínimo 1 caractere especial. Os caracteres especiais são: !@#$%^&*()-+
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Styles will be included here automatically -->
+  </head>
+  <body>
+    <h1 id="header"></h1>
+  <script>
+
+  var nfaltantes = 0;
+  var n = prompt("Digite a sua senha");
+
+
+    function minusculo(str) {
+        var pattern = new RegExp(
+          "^(?=.*[a-z]).+$"
+        );
+        if (!pattern.test(str)) {
+          console.log("Adicione uma letra minuscula" + "<br>");
+          return 1;
+        }
+        return 0;
+      }
+
+    function maiusculo(str) {
+        var pattern = new RegExp(
+          "^(?=.*[A-Z]).+$"
+        );
+        if (!pattern.test(str)) {
+          console.log("Adicione ao menos uma letra maiuscula" + "<br>");
+          return 1;
+        }
+        return 0;
+      }
+
+    function numero(str) {
+        var pattern = new RegExp(
+          "^(?=.*\\d).+$"
+        );
+        if (!pattern.test(str)) {
+          console.log("Adicione um Numero" + "<br>");
+          return 1;
+        }
+        return 0;
+      }
+
+    function simbolo(str) {
+        var pattern = new RegExp(
+          "^(?=.*[-+_!@#$%^&*.,?]).+$"
+        );
+        if (!pattern.test(str)) {
+          console.log("Adicione um Simbolo" + "<br>");
+          return 1
+        }
+        return 0;
+
+      }
+
+    if (n.length<6) {
+      console.log("Adicione mais " +  (6 - n.length) + " caracteres" + "<br>");
+      nfaltantes = 6 - n.length;
+    }else{
+      nfaltantes = minusculo(n)+maiusculo(n)+numero(n)+simbolo(n);
+    }
+
+
+document.write(nfaltantes);
+
+  </script>
+    <!-- Scripts will be included here automatically with type="module" -->
+  </body>
+</html>
