@@ -5,7 +5,13 @@ Conforme enunciado permitido utilizar qualquer linguagem para realização dos d
 
 Para executar os desafios para abrir os arquivos HTML em um navegador ou executá-los no link do Replit.
 
+Para acessar de maneira fácil e rápida todas as questões, acesse: https://replit.com/@chefia777/Desafio-Programacao-Capgemini#index.html
+
 ## Questão 1
+Para testar voce deve acessar o arquivo "Questao 1.html" e uma vez habilitado no navegar inserir o tamanho da escada desejada no prompt.
+
+Será construída uma escada utilizando asteriscos com o tamanho digitado.
+
 ## Questão 2
 Para testar voce deve acessar o arquivo "Questao 2.html" e uma vez habilitado no navegar inserir a senha desejada no prompt.
 
